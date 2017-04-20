@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25D1D37CEA23727731AEB1D4 /* Pods_Episodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DD6F1AE263BEAB76F1C3C0 /* Pods_Episodes.framework */; };
 		F0149FB61E804AD3003CBA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FB51E804AD3003CBA1E /* AppDelegate.swift */; };
 		F0149FB81E804AD3003CBA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FB71E804AD3003CBA1E /* ViewController.swift */; };
 		F0149FBB1E804AD3003CBA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0149FB91E804AD3003CBA1E /* Main.storyboard */; };
 		F0149FBD1E804AD3003CBA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0149FBC1E804AD3003CBA1E /* Assets.xcassets */; };
 		F0149FC01E804AD3003CBA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0149FBE1E804AD3003CBA1E /* LaunchScreen.storyboard */; };
+		F0149FC81E804AF1003CBA1E /* TVMazeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FC71E804AF1003CBA1E /* TVMazeAPIClient.swift */; };
+		F0149FCA1E804E3E003CBA1E /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FC91E804E3E003CBA1E /* TVShow.swift */; };
+		F0149FCC1E804F36003CBA1E /* TVDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FCB1E804F36003CBA1E /* TVDataStore.swift */; };
+		F0149FCE1E805718003CBA1E /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0149FCD1E805718003CBA1E /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00DD6F1AE263BEAB76F1C3C0 /* Pods_Episodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Episodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDC77CCC44E2495DEA61324 /* Pods-Episodes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Episodes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Episodes/Pods-Episodes.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1F3A08755A8AE72A055033 /* Pods-Episodes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Episodes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Episodes/Pods-Episodes.release.xcconfig"; sourceTree = "<group>"; };
 		F0149FB21E804AD3003CBA1E /* Episodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Episodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0149FB51E804AD3003CBA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0149FB71E804AD3003CBA1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		F0149FBC1E804AD3003CBA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0149FBF1E804AD3003CBA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0149FC11E804AD3003CBA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0149FC71E804AF1003CBA1E /* TVMazeAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVMazeAPIClient.swift; sourceTree = "<group>"; };
+		F0149FC91E804E3E003CBA1E /* TVShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		F0149FCB1E804F36003CBA1E /* TVDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDataStore.swift; sourceTree = "<group>"; };
+		F0149FCD1E805718003CBA1E /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D1D37CEA23727731AEB1D4 /* Pods_Episodes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23ACAB7FD74AB1F66CB6755F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CDC77CCC44E2495DEA61324 /* Pods-Episodes.debug.xcconfig */,
+				EA1F3A08755A8AE72A055033 /* Pods-Episodes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92049D0401CF55462ABE69F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6F1AE263BEAB76F1C3C0 /* Pods_Episodes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0149FA91E804AD3003CBA1E = {
 			isa = PBXGroup;
 			children = (
 				F0149FB41E804AD3003CBA1E /* Episodes */,
 				F0149FB31E804AD3003CBA1E /* Products */,
+				23ACAB7FD74AB1F66CB6755F /* Pods */,
+				92049D0401CF55462ABE69F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +88,13 @@
 			children = (
 				F0149FB51E804AD3003CBA1E /* AppDelegate.swift */,
 				F0149FB71E804AD3003CBA1E /* ViewController.swift */,
+				F0149FC71E804AF1003CBA1E /* TVMazeAPIClient.swift */,
+				F0149FCB1E804F36003CBA1E /* TVDataStore.swift */,
+				F0149FC91E804E3E003CBA1E /* TVShow.swift */,
+				F0149FCD1E805718003CBA1E /* Episode.swift */,
 				F0149FB91E804AD3003CBA1E /* Main.storyboard */,
-				F0149FBC1E804AD3003CBA1E /* Assets.xcassets */,
 				F0149FBE1E804AD3003CBA1E /* LaunchScreen.storyboard */,
+				F0149FBC1E804AD3003CBA1E /* Assets.xcassets */,
 				F0149FC11E804AD3003CBA1E /* Info.plist */,
 			);
 			path = Episodes;
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0149FC41E804AD3003CBA1E /* Build configuration list for PBXNativeTarget "Episodes" */;
 			buildPhases = (
+				358D59945C4BDA2F9B78821F /* [CP] Check Pods Manifest.lock */,
 				F0149FAE1E804AD3003CBA1E /* Sources */,
 				F0149FAF1E804AD3003CBA1E /* Frameworks */,
 				F0149FB01E804AD3003CBA1E /* Resources */,
+				00D252746D0B3D1E1F6C38FB /* [CP] Embed Pods Frameworks */,
+				B7CCF3A58F15B94B8C325C5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +135,7 @@
 				TargetAttributes = {
 					F0149FB11E804AD3003CBA1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X3V4LZU6AD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,12 +171,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00D252746D0B3D1E1F6C38FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Episodes/Pods-Episodes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		358D59945C4BDA2F9B78821F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7CCF3A58F15B94B8C325C5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Episodes/Pods-Episodes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0149FAE1E804AD3003CBA1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F0149FB81E804AD3003CBA1E /* ViewController.swift in Sources */,
+				F0149FCE1E805718003CBA1E /* Episode.swift in Sources */,
+				F0149FCC1E804F36003CBA1E /* TVDataStore.swift in Sources */,
+				F0149FC81E804AF1003CBA1E /* TVMazeAPIClient.swift in Sources */,
+				F0149FCA1E804E3E003CBA1E /* TVShow.swift in Sources */,
 				F0149FB61E804AD3003CBA1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +350,10 @@
 		};
 		F0149FC51E804AD3003CBA1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CDC77CCC44E2495DEA61324 /* Pods-Episodes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X3V4LZU6AD;
 				INFOPLIST_FILE = Episodes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.Episodes;
@@ -270,8 +364,10 @@
 		};
 		F0149FC61E804AD3003CBA1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1F3A08755A8AE72A055033 /* Pods-Episodes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X3V4LZU6AD;
 				INFOPLIST_FILE = Episodes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.Episodes;
@@ -299,6 +395,7 @@
 				F0149FC61E804AD3003CBA1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
