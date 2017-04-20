@@ -11,6 +11,8 @@ import Alamofire
 
 class TVMazeAPIClient {
     
+    //Gets a show based on title
+    
     class func getShow(name: String, completion: @escaping ([String:Any]) -> Void) {
         let parameters = [
             "q" : name
@@ -23,6 +25,8 @@ class TVMazeAPIClient {
             }
         }
     }
+    
+    //Get all episodes of the show
     
     class func getAllEpisodes(id: Int, completion: @escaping ([[String:Any]]) -> Void) {
         Alamofire.request("http://api.tvmaze.com/shows/\(id)/episodes").responseJSON { (response) in

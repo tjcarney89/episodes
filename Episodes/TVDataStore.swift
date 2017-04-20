@@ -15,6 +15,7 @@ final class TVDataStore {
     var episodes: [Episode] = []
     var show: TVShow?
     
+    //Creates a show object from API call result
     func createShow(name: String, completion: @escaping () -> Void) {
         TVMazeAPIClient.getShow(name: name) { (showDict) in
             self.show = TVShow(dictionary: showDict)
@@ -23,6 +24,7 @@ final class TVDataStore {
         }
     }
     
+    //Creates episodes based on show ID
     func createEpisodes(id: Int, completion: @escaping () -> Void) {
         TVMazeAPIClient.getAllEpisodes(id: id) { (jsonResponse) in
             for response in jsonResponse {

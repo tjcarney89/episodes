@@ -31,11 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -46,15 +41,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
-    
-    
     @IBAction func buttonTapped(_ sender: Any) {
+        //If no text is entered, display alert
         if !showTextField.hasText {
             let myAlert = UIAlertController(title: "No Text Entered", message: "Please Enter a Show Title", preferredStyle: .alert)
             let myAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             myAlert.addAction(myAction)
             self.present(myAlert, animated: true)
+        //If there is text that has been changed...
         } else if isChanged == true {
             isChanged = false
             episodeLabel.isHidden = true
@@ -63,24 +57,47 @@ class ViewController: UIViewController, UITextFieldDelegate {
             loadingLabel.isHidden = false
             loadingIndicator.startAnimating()
             if let name = showTextField.text {
+                //Remove all previous episode data from array
                 store.episodes.removeAll()
+                //Create a show object
                 self.store.createShow(name: name, completion: {
                     if let id = self.store.show?.id {
+                        //Create episodes from show
                         self.store.createEpisodes(id: id, completion: {
                             self.episodeLabel.isHidden = false
                             self.descriptionLabel.isHidden = false
                             self.loadingIndicator.stopAnimating()
                             self.loadingIndicator.isHidden = true
                             self.loadingLabel.isHidden = true
+                            //Get a random episode
+                            //self.getRandomEpisode(episodes: self.store.episodes)
+                        })
+                    }
+                })
+                
+            }
+        //If there is not new text
+        } else {
+            if let name = showTextField.text {
+                //Remove all previous episode data from array
+                store.episodes.removeAll()
+                //Create a show object
+                self.store.createShow(name: name, completion: {
+                    if let id = self.store.show?.id {
+                        //Create episodes from show
+                        self.store.createEpisodes(id: id, completion: {
+                            self.episodeLabel.isHidden = false
+                            self.descriptionLabel.isHidden = false
+                            self.loadingIndicator.stopAnimating()
+                            self.loadingIndicator.isHidden = true
+                            self.loadingLabel.isHidden = true
+                            //Get a random episode
                             self.getRandomEpisode(episodes: self.store.episodes)
                         })
                     }
                 })
                 
             }
-        } else {
-            print("GETTING CALLED")
-            self.getRandomEpisode(episodes: self.store.episodes)
             
         }
         
